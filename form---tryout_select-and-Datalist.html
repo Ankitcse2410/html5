@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <h4>Selecting Input values from Dropdown:-</h4>
+            <!-- When the input is collected over select dropdown,
+             the user needs to select an option from the dropdown provided -->
+            select Technology for appearing the certification:
+            <select>
+                <option value="HTML">HTML </option>
+                <option value="CSS">CSS </option>
+                <option value="JS">JS </option>
+                <option value="WD" selected>web developer </option>
+            </select><br/><br/>
+            <!-- When the input is collected through datalist, user can choose the vlue from the option list,
+                 or they can provide their own input through the input field -->
+            choose select Technology for appearing the certification:<input list="Technologies" />
+            <datalist id="Technologies">
+                <option value="HTML">HTML </option>
+                <option value="CSS">CSS </option>
+                <option value="JS">JS </option>
+                <option value="WD" selected>web developer </option>
+                <input type="submit">
+            </datalist>
+        </form>
+    </body>
+</html>

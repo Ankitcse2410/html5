@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Add New Contacts</title>
+</head>
+
+<body>
+<header>
+	<nav class="navigation">
+	<a href="#">Edit Contacts</a>
+	<a href="#">Delete Contact</a>
+	<a href="#">Logout</a>
+	</nav>
+</header>
+<div id="contact-form" class="mycontact">
+
+<ul id="errors" class="">
+<li id="info">Please recheck your form and Submit again: </li>
+</ul>
+
+<p id="success">Details Saved Successfully!!</p>
+
+<form action="validate_addnew" method="POST">
+
+<label for="Fname">First Name <span class="required">*</span>:</label>
+<input type="text" id="First_Name" name="FirstName" value="" pattern="[A-Za-z0-9]+" required="required" autofocus="autofocus"/>
+
+<label for="Mname">Middle Name :</label>
+<input type="text" id="Middle_Name" name="MiddleName" pattern="[A-Za-z]{30}" value=""/>
+
+<label for="Lname">Last Name <span class="required">*</span>:</label>
+<input type="text" id="Last_Name" name="LastName" value="" pattern="[A-Za-z]{40}" required="required"/>
+<br/><br/>
+<label for="email">Email <span class="required">*</span>:</label>
+<input type="email" id="email" name="Email" value="" placeholder="username@example.com" required="required"/>
+<br/><br/>
+<label for="Phone1">Phone 1:<span class="required">*</span>:</label>
+<input type="text" id="contactHome" name="Phone1" pattern="[0-9]{10}" value="" required="required"/>
+
+<label for="Phone2">Phone 2:</label>
+<input type="text" id="contactOffice" name="Phone2" pattern="[0-9]{10}" value=""/>
+<br/><br/>
+<label for="Address1">Address<span class="required">*</span>:</label>
+<textarea id="address1" name="Address" required="required" data-maxlength="20"></textarea>
+<br/><br/>
+<label for="city">City<span class="required">*</span>:</label>
+<input type="city" id="city" name="city" value="" required="required"/>
+
+<label for="state">State <span class="required">*</span>:</label>
+<input type="state" id="state" name="state" value="" required="required"/>
+<br/><br/>
+<label for="country">Country <span class="required">*</span>:</label>
+<input type="country" id="country" name="country" value="" required="required"/>
+<br/><br/>
+<label for="zip">Zip <span class="required">*</span>:</label>
+<input type="zip" id="zip" name="zip" value="" required="required"/>
+<br/><br/>
+<input type="Submit" value="Submit" id="submit-button"/>
+<br/><br/>
+<p id="required-desc"><span class="required">*</span> indicates a required field</p>
+</form>
+</div>
+</body>
+</html>
