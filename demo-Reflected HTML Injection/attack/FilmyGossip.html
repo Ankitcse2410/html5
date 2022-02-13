@@ -3,32 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="./encoder.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FilmyGossip</title>
-    <script>
-        $.get('data.json', function (data) {
-            $("#list").text('');
-            var content = '';
-            for (var i = 0; i < data.length; i++) {
-                let movie = Encoder.htmlEncode(data[i].name);
-                content += '<li>' + movie + '</li>';
-            }
-            $("#list").append(content);
-        });
-    </script>
 </head>
 
 <body>
     <h1 id="heading"> Welcome to FilmyGossip </h1>
+    <div id="search">
+        <form method="GET" action="details.html">
+            <input type="text" placeholder="Search for a movie" name="movie">
+            <button type="submit">
+                <i class="fa fa-search"> </i>
+            </button>
+        </form>
+    </div>
     <br>
     <div id="container">
         <h2 id="title">
-            <u>Latest Movies</u>
+            <u>About FilmyGossip</u>
         </h2>
         <br>
-        <ul id="list"></ul>
+        <p>
+            FilmyGossip provides you the trendy updates and reviews of latest Movies. You can register with us to get the feed in your
+            mail.
+            <br>
+            <button>Register</button>
+        </p>
     </div>
     <hr>
     <footer>
